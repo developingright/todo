@@ -1,12 +1,48 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'todo\css\main.css'%}">
     <title>Document</title>
+    
 </head>
 <body>
-    <h1>Hello</h1>
+    <div class="container">
+        <div class="search">
+            <form method="POST" action="/">
+                {% csrf_token %}
+                {{forms.title}}
+        
+                <button type="submit" class="subs">+</button>
+            </form>
+        </div>
+        {% for item in items%}
+            <div class="box">
+                {% if item.completed %}
+                    <img src="{% static 'todo\images\circle.svg' %}" alt=""></img>
+                {% else %}
+                    <img src="{% static 'todo\images\circle2.svg' %}" alt=""></img>
+                {% endif%}
+            <h3>{{item}}</h3>
+                
+                <div class="right">
+                    
+                    <form method="POST"action="">
+                        <a href="{% url 'edit' item.id %}"><img src="{% static 'todo\images\edit.svg' %}" alt=""></img></a>
+                        <a href="{% url 'delete' item.id %}"><img src="{% static 'todo\images\delete.svg' %}" alt=""></img></a>
+                    </form>
+                    
+                </div>
+
+            </div>
+        {% endfor%}
+    </div>
+   
+    
+
+    
 </body>
 </html>

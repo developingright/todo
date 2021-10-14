@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: auto;
+    margin-top: 100px;
+    width: 40%;
+    /* height: 100%; */
+    /* background-color: blueviolet; */
+}
+.box{
+
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.25));
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 14px;
+
+}
+.search{
+    /* background-color: burlywood; */
+    display: inline-block;
+    width: 100%;
+    
+}
+input{
+    outline: 0;
+    border: 0;
+    padding: 23px;
+    filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.25));
+    border-radius: 14px;
+    width: 80%;
+    font-size: 1.4em;
+}
+.subs{
+    width: 1.2em;
+    border-radius: 100%; 
+    font-size: 4em;  
+    float: right; 
+    background-color: #2753FF;
+    color: white;
+    border: 0;
+    filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.25));
+}
+/* ::placeholder{
+    font-size: 1.6em;
+
+}*/
+img{
+    width: 30px;
+    height: 30px;
+}
+img,h3{
+
+    vertical-align: middle;
+    display: inline;
+    position: relative;
+}
+h3{
+    font-family: roboto;
+    margin-left: 2em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.right{
+    float: right;
+    /* margin-left: 1.4em; */
+}
+.right img{
+    margin-right: 1.2em;
+}
+.subs{
+
+    fill: transparent;
+    transition: all .3s; 
+}
+.subs:hover{
+    cursor: pointer;
+    background-color: rgb(98, 114, 255);
+    transition: all .3s;
+}
+.nostyle{
+    outline: 0;
+    border: 0;
+    /* color: brown;
+     */
+    background: none;
+    cursor: pointer;
+}

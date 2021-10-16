@@ -31,9 +31,6 @@ def edit(request,pk):
 def delete(request,pk):
     item = Task.objects.get(id=pk)
 
-    if request.method=="POST":
-
-        item.delete()
-        return redirect('/')
-    context = {'item':item}
-    return render(request, 'todo/delete.html',context)
+    item.delete()
+    return redirect('/')
+    
